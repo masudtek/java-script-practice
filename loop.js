@@ -101,3 +101,7 @@ for( var i = 0 ; i<bookPrice.length; i++){
     }
     console.log(bookPrice[i])
 } */
+
+/* 
+https://docs.google.com/document/d/1HCoVHAtSM4PVAoDPo40FjyUBGS22vi2qomPwGT52rLE/edit
+*/
