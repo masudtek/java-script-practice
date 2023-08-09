@@ -1,7 +1,7 @@
 // Assignment -4- 
 // problem -1
 
-/* function cubeNumber(number) {
+function cubeNumber(number) {
   let result = 0;
   if (typeof number !== "number") {
     result = "Please Enter a valid number";
@@ -14,11 +14,11 @@
 const myNumber = 3;
 const result = cubeNumber(myNumber);
 console.log(result);
- */
+
 
 // problem-2
 
-/* function matchFinder(string1, string2) {
+function matchFinder(string1, string2) {
   let result = 0;
   if (typeof string1 !== "string" || typeof string2 !== "string") {
     result = "Please input both parameter an array";
@@ -35,28 +35,33 @@ console.log(result);
 }
 let myResult = matchFinder("peter parker", "Pet");
 console.log(myResult);
- */
+
 
 // problem-3
 
-/* function sortMaker(arr) {
+function sortMaker(arr) {
   if (arr[0] < 0 || arr[1] < 0) {
-    console.log("invalid input");
+    let invalidOutput = "invalid input";
+    return invalidOutput;
   } else if (arr[0] < arr[1]) {
-    console.log(arr.reverse());
+    let arrReverse = arr.reverse()
+    return arrReverse;
   } else if (arr[0] > arr[1]) {
-    console.log(arr);
+    let myArray = arr;
+    return myArray
   } else if (arr[0] === arr[1]) {
-    console.log("equal");
+    let arrEqual = "equal"; 
+    return arrEqual;
   }
 }
 
-const myArray = [4,-2];
+const myArray = [4,5];
 const myResult = sortMaker(myArray);
- */
+console.log(myResult)
+
 
 // problem-4
-/* 
+
 function findAddress(obj) {
   const key = ["street", "house", "society"];
   let result = "";
@@ -81,14 +86,15 @@ const myObject = { street: 10, house: "15A", society: "Earth Perfect"};
 // const myObject = {house: "15A", society: "Earth Perfect"};
 const myResult = findAddress(myObject);
 console.log("output:", myResult);
- */
+
 
 // problem - 5
 
 function canPay(changeArray, totalDue) {
   let sum = 0;
   if (changeArray.length === 0) {
-    return " Please enter a valid array of number";
+    let invalidText = " Please enter a valid array of number";
+    return invalidText;
   } else {
     for (let i = 0; i < changeArray.length; i++) {
       sum = sum + changeArray[i];
@@ -101,8 +107,8 @@ function canPay(changeArray, totalDue) {
   }
 }
 
-const myArray = [1, 3, 5];
-// const myArray = [];
+// const myArray = [1, 3, 5];
+const myArray = [];
 const productPrice = 10;
 
 const myResult = canPay(myArray, productPrice);
