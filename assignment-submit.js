@@ -47,21 +47,16 @@ function cubeNumber(number) {
   
   
   function findAddress(obj) {
-    const key = ["street", "house", "society"];
-    let result = "";
-    for (let i = 0; i < key.length; i++) {
-      let value = obj[key[i]];
-      if(value !== undefined){
-        result = result + value +"," ;
-      } 
-      else if (value === undefined) {
-        result = result + "," + "__"+ "," ;
-        continue;
-      }else if(value === undefined){
-        result = result + "," + "__" ;
-      } 
+    if (typeof obj !== "object") {
+      const invalidMessage = "Please provide me a valid object";
+      return invalidMessage;
+    } else {
+      const street = obj.street || "__";
+      const house = obj.house || "__";
+      const society = obj.society || "__";
+      const result = street + "," + house + "," + society;
+      return result;
     }
-    return result;
   }
   
  

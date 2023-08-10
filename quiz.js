@@ -59,3 +59,8 @@ function maxInArray(numbers) {
 const myArrayHeight = [167, 190, 120, 137, 145, 456];
 const tallest = maxInArray(myArrayHeight);
 console.log("Tallest Number of the array is : ", tallest);
+let a ;
+if(a == null){
+
+}
+
